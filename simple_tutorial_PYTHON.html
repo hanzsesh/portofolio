@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Python by Hanz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; 
+            color: #e0e0e0; 
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1f1f1f; 
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .title {
+            font-size: 18px;
+        }
+        .icons i {
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1e1e1e; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2 {
+            color: #ffffff; 
+        }
+        h1 {
+            font-size: 24px;
+            border-left: 5px solid #3f51b5;
+            padding-left: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            border-left: 5px solid #6200ea;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e0e0e0; 
+        }
+        .code-block {
+            background-color: #2d2d2d; 
+            color: #00ff00; 
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .tag {
+            background-color: #333;
+            color: #00ff00;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722; 
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #b74b4b; 
+            color: black;
+            border: none;
+            border-radius: 4rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background-color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="title">Belajar Python by Hanz</div>
+        <div class="icons">
+            <i class="fas fa-share-alt"></i>
+            <i class="fas fa-bookmark"></i>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Hai, Sobat Koder Python!</h1>
+        <p>Selamat datang di dunia Python! Di sini, kita bakal belajar sambil tertawa. Siap? Yuk, kita mulai!</p>
+        
+        <h2>Apa Itu Python?</h2>
+        <p>Python itu kayak sahabat setia, selalu ada saat kamu butuh! Dia juga nggak neko-neko, karena sintaksisnya yang mudah dimengerti. Python itu bahasa pemrograman yang banyak dipakai di dunia. Tanpa Python, banyak orang bakal bingung, seperti saat kamu lupa password Wi-Fi!</p>
+        
+        <h2>Struktur Dasar Python</h2>
+        <p>Yuk, lihat struktur dasar dari program Python:</p>
+        <div class="code-block">
+            print("Halo, Dunia!")  # Menampilkan teks ke layar
+        </div>
+
+        <h2>Variabel dan Tipe Data</h2>
+        <p>Variabel itu kayak kotak penyimpanan. Kamu bisa simpan berbagai jenis data di dalamnya. Misalnya:</p>
+        <div class="code-block">
+            angka = 10<br>
+            nama = "Hanz"<br>
+            print(nama, "memiliki angka:", angka)
+        </div>
+        
+        <h2>Pengkondisian</h2>
+        <p>Python bisa bikin keputusan. Misalnya, kalau kamu lapar, makanlah! Contohnya:</p>
+        <div class="code-block">
+            if angka > 5:<br>
+            &nbsp;&nbsp;&nbsp;print("Angka lebih besar dari 5!")<br>
+            else:<br>
+            &nbsp;&nbsp;&nbsp;print("Angka 5 atau lebih kecil!")
+        </div>
+
+        <h2>Looping</h2>
+        <p>Looping itu seperti ketika kamu berulang kali menjawab "sudah makan?" saat lebaran. Yuk, kita lihat contohnya:</p>
+        <div class="code-block">
+            for i in range(5):<br>
+            &nbsp;&nbsp;&nbsp;print("Ini pengulangan ke-", i)
+        </div>
+
+        <h2>Fungsi</h2>
+        <p>Fungsi adalah kumpulan kode yang bisa dipanggil berkali-kali. Seperti kamu yang terus-menerus bercerita tentang makanan favorit:</p>
+        <div class="code-block">
+            def cerita_makanan():<br>
+            &nbsp;&nbsp;&nbsp;print("Saya suka pizza!")<br>
+            <br>
+            cerita_makanan()  # Memanggil fungsi
+        </div>
+
+        <h2>Soal Candaan Seputar Python</h2>
+        <p>Setelah belajar banyak, yuk kita coba soal-soal lucu berikut:</p>
+        <a href="#" class="button" onclick="showJoke(); return false;">Klik untuk lihat soal</a>
+        
+        <div id="joke" class="joke" style="display:none;">
+            <p>1. Kenapa Python suka bersepeda?</p>
+            <button class="button" id="btn-answer1" onclick="showAnswer('answer1');">Lihat Jawaban</button>
+            <div id="answer1" class="answer" style="display:none;">Jawaban: Karena dia bisa <span class="tag">import bike</span>!</div>
+
+            <p>2. Mengapa Python sangat baik dalam berkomunikasi?</p>
+            <button class="button" id="btn-answer2" onclick="showAnswer('answer2');">Lihat Jawaban</button>
+            <div id="answer2" class="answer" style="display:none;">Jawaban: Karena ia selalu bisa <span class="tag">print()</span>!</div>
+
+            <p>3. Apa yang dikatakan Python kepada Java?</p>
+            <button class="button" id="btn-answer3" onclick="showAnswer('answer3');">Lihat Jawaban</button>
+            <div id="answer3" class="answer" style="display:none;">Jawaban: "Kamu terlalu verbose!"</div>
+
+            <p>4. Mengapa Python suka berada di kebun?</p>
+            <button class="button" id="btn-answer4" onclick="showAnswer('answer4');">Lihat Jawaban</button>
+            <div id="answer4" class="answer" style="display:none;">Jawaban: Karena dia suka <span class="tag">list()</span>!</div>
+
+            <p>5. Kenapa Python tidak suka hujan?</p>
+            <button class="button" id="btn-answer5" onclick="showAnswer('answer5');">Lihat Jawaban</button>
+            <div id="answer5" class="answer" style="display:none;">Jawaban: Karena dia tidak mau <span class="tag">import os</span>!</div>
+        </div>
+
+        <button class="back-button" onclick="window.location.href='index.html';">Kembali ke Halaman Utama</button>
+    </div>
+
+    <script>
+        function showJoke() {
+            document.getElementById("joke").style.display = "block";
+        }
+        function showAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            answer.style.display = answer.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar CSS by Hanz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Warna latar belakang gelap */
+            color: #e0e0e0; /* Warna teks terang */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1f1f1f; /* Warna header gelap */
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .title {
+            font-size: 18px;
+        }
+        .icons i {
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1e1e1e; /* Warna latar belakang kontainer */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2 {
+            color: #ffffff; /* Warna judul putih */
+        }
+        h1 {
+            font-size: 24px;
+            border-left: 5px solid #3f51b5;
+            padding-left: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            border-left: 5px solid #6200ea;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e0e0e0; /* Warna teks paragraf terang */
+        }
+        .code-block {
+            background-color: #2d2d2d; /* Warna latar belakang blok kode */
+            color: #00ff00; /* Warna teks kode hijau */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .tag {
+            background-color: #333;
+            color: #00ff00;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722; /* Warna tombol oranye */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #b74b4b; /* Warna tombol kembali */
+            color: black;
+            border: none;
+            border-radius: 4rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background-color: #fff; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="title">Belajar CSS by Hanz</div>
+        <div class="icons">
+            <i class="fas fa-share-alt"></i>
+            <i class="fas fa-bookmark"></i>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Hai, Sobat Koder!</h1>
+        <p>Selamat datang di dunia CSS! Di sini, kita akan belajar cara mempercantik halaman web kita. Siap-siap, ya! (Jangan khawatir, kita tidak akan menggunakan lipstick di sini!)</p>
+        
+        <h2>Apa Itu CSS?</h2>
+        <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain dan mengatur tata letak halaman web. Tanpa CSS, halaman web kita akan tampak seperti sandwich tanpa isi: tidak menarik!</p>
+
+        <h2>Struktur Dasar CSS</h2>
+        <p>Sebelum kita mulai, yuk lihat struktur dasar CSS. Ingat, ini seperti resep masakan—setiap elemen harus tepat:</p>
+        <div class="code-block">
+            <span class="tag">selector</span> {<br>
+            &nbsp;&nbsp;property: value;<br>
+            }
+        </div>
+        
+        <h2>Pemilihan Elemen</h2>
+        <p>Dengan CSS, kita dapat memilih elemen HTML berdasarkan tag, kelas, atau ID. Bayangkan kamu adalah penata rias yang memilih produk terbaik untuk wajahmu:</p>
+        <div class="code-block">
+            <span class="tag">p</span> {<br>
+            &nbsp;&nbsp;color: blue;<br>
+            }<br>
+            <span class="tag">.classname</span> {<br>
+            &nbsp;&nbsp;font-size: 20px;<br>
+            }<br>
+            <span class="tag">#idname</span> {<br>
+            &nbsp;&nbsp;background-color: red;<br>
+            }
+        </div>
+
+        <h2>Properti CSS Umum</h2>
+        <p>Beberapa properti CSS yang sering digunakan adalah:</p>
+        <div class="code-block">
+            <span class="tag">color</span>: Mengatur warna teks. (Supaya tidak monoton!)<br>
+            <span class="tag">background-color</span>: Mengatur warna latar belakang. (Agar tidak membosankan!)<br>
+            <span class="tag">font-size</span>: Mengatur ukuran font. (Supaya tidak bikin mata pegel!)<br>
+            <span class="tag">margin</span>: Mengatur jarak luar elemen. (Agar tidak berdesakan!)<br>
+            <span class="tag">padding</span>: Mengatur jarak dalam elemen. (Supaya nyaman dilihat!)
+        </div>
+
+        <h2>Box Model</h2>
+        <p>Setiap elemen dalam HTML memiliki box model yang terdiri dari margin, border, padding, dan konten. Ini penting untuk mengatur tata letak elemen—kayak memilih baju yang pas:</p>
+        <div class="code-block">
+            <span class="tag">box-sizing</span>: border-box;<br>
+            <span class="tag">margin</span>: 10px;<br>
+            <span class="tag">border</span>: 1px solid black;<br>
+            <span class="tag">padding</span>: 5px;<br>
+        </div>
+
+        <h2>Soal Candaan Seputar CSS</h2>
+        <p>Nah, setelah kita belajar banyak hal, waktunya menguji kemampuanmu! Berikut beberapa soal dengan bumbu candaan:</p>
+        <a href="#" class="button" onclick="showJoke(); return false;">Klik untuk lihat soal</a>
+        
+        <div id="joke" class="joke" style="display:none;">
+            <p>1. Kenapa CSS tidak bisa berteman dengan HTML?</p>
+            <button class="button" id="btn-answer1" onclick="showAnswer('answer1');">Lihat Jawaban</button>
+            <div id="answer1" class="answer" style="display:none;">Jawaban: Karena selalu ada yang tidak cocok! (Kayak mantan!)</div>
+
+            <p>2. Mengapa developer suka CSS?</p>
+            <button class="button" id="btn-answer2" onclick="showAnswer('answer2');">Lihat Jawaban</button>
+            <div id="answer2" class="answer" style="display:none;">Jawaban: Karena mereka suka tampil menawan! (Tapi tetap harus pakai bajunya!)</div>
+
+            <p>3. Apa yang dikatakan CSS kepada JavaScript?</p>
+            <button class="button" id="btn-answer3" onclick="showAnswer('answer3');">Lihat Jawaban</button>
+            <div id="answer3" class="answer" style="display:none;">Jawaban: "Kau bisa bertindak, tapi aku yang membuatmu terlihat!" (Keren kan?)</div>
+
+            <p>4. Kenapa CSS selalu tenang?</p>
+            <button class="button" id="btn-answer4" onclick="showAnswer('answer4');">Lihat Jawaban</button>
+            <div id="answer4" class="answer" style="display:none;">Jawaban: Karena dia selalu punya <span class="tag">display: flex;</span>!</div>
+
+            <p>5. Mengapa CSS tidak pernah stres?</p>
+            <button class="button" id="btn-answer5" onclick="showAnswer('answer5');">Lihat Jawaban</button>
+            <div id="answer5" class="answer" style="display:none;">Jawaban: Karena dia selalu bisa <span class="tag">float</span>!</div>
+        </div>
+
+        <button class="back-button" onclick="window.location.href='index.html';">Kembali ke Halaman Utama</button>
+    </div>
+
+    <script>
+        function showJoke() {
+            document.getElementById("joke").style.display = "block";
+        }
+
+        function showAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            answer.style.display = answer.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
