@@ -21,15 +21,12 @@
         }
 
         body {
-            width: 100%;
-            height: 100vh;
             overflow-x: hidden;
             background-color: black;
             color: white;
         }
 
         header {
-            margin-top: 20px;
             position: fixed;
             top: 0;
             left: 0;
@@ -50,10 +47,6 @@
             transition: 0.5s ease;
         }
 
-        .logo:hover {
-            transform: scale(1.1);
-        }
-
         nav a {
             font-size: 1.8rem;
             color: white;
@@ -72,6 +65,131 @@
         section {
             min-height: 100vh;
             padding: 5rem 9% 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #b74b4b;
+        }
+
+        .about-content, .skills-content, .certificates-content, .experience-content, .contact-content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .skill {
+            padding: 1.5rem;
+            border: 1px solid #b74b4b;
+            border-radius: 8px;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(183, 75, 75, 0.5);
+        }
+
+        .certificate {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #b74b4b;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .certificate img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .certificate:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(183, 75, 75, 0.5);
+        }
+
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project {
+            padding: 1rem;
+            border: 1px solid #b74b4b;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(183, 75, 75, 0.5);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 2rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 1rem;
+            border: 1px solid #b74b4b;
+            border-radius: 8px;
+            width: 100%;
+            resize: none;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-form button {
+            padding: 1rem;
+            background-color: #b74b4b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #a63b3b;
         }
 
         .home {
@@ -95,6 +213,30 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .typing-text {
+            display: inline-flex;
+            align-items: center;
+            font-size: 34px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .typing-text span {
+            border-right: 2px solid #b74b4b;
+            animation: blink 0.75s step-end infinite;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
 
         .home-content p {
@@ -117,7 +259,7 @@
             transition: transform 0.5s, filter 0.5s;
         }
 
-        .home-img:hover img, .home-img:active img {
+        .home-img:hover img {
             transform: scale(1.1) rotate(5deg);
             filter: brightness(0.8);
         }
@@ -179,25 +321,9 @@
 
         .tutorial-btn:hover {
             transform: scale(1.03);
-            background-color: #b74b4b;
+            background-color:#b74b4b;
             color: black;
             box-shadow: 0 0 25px #b74b4b;
-        }
-
-        .typing-text {
-            font-size: 34px;
-            font-weight: 600;
-            min-width: 280px;
-            border-right: 2px solid #b74b4b;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: blink 0.75s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
         }
 
         .tutorial-buttons {
@@ -253,14 +379,16 @@
     <header>
         <a href="#" class="logo">Hanz</a>
         <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#">Services</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <section class="home">
         <div class="home-img">
             <img src="https://www.dropbox.com/scl/fi/im9mn9zgiyiw51xttjme1/IMG_20241027_185151.jpg?rlkey=zqrwb6agfwv14xxt3whwkanlq&st=yym01vau&dl=0&dl=1" alt="Profile Image">
@@ -285,6 +413,84 @@
             </div>
         </div>
     </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I'm a passionate developer with experience in creating dynamic web applications. I enjoy learning new technologies and applying them in innovative ways.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skills-list">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificates-content">
+        <div class="certificate">
+            <h3>Web Programming</h3>
+            <img src="https://www.dropbox.com/scl/fi/5t5z4vh5dzvlsj41umq0x/coursecertificate6708b7019d07535805647546-1729918159585.pdf_20241026_170620644_7650990615744455838.png?rlkey=idzhj2jnfcgtwitu14dy9xdna&st=vpjngg39&dl=0&dl=1" alt="Web Programming Certificate">
+        </div>
+        <div class="certificate">
+            <h3>UI/UX Design and Development</h3>
+            <img src="https://www.dropbox.com/scl/fi/e807bpiifvbud1oqdn7ad/coursecertificate67106b064c071e6a2237adea-1729131107377.pdf_20241017_091327020_391243516315950388.png?rlkey=za1u942mxlsyn43qq5ewtvrl5&st=g1fm2umc&dl=0&dl=1" alt="UI/UX Design Certificate">
+        </div>
+    </div>
+</section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-list">
+            <div class="project">
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A responsive portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2: E-commerce Platform</h3>
+                <p>An e-commerce platform featuring user authentication, product listings, and a shopping cart. Developed using React and Node.js.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3: Blog Application</h3>
+                <p>A blog application allowing users to create, edit, and comment on posts. Built with Python and Django.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-content">
+            <p>I have worked on various projects that helped me grow my skills and gain practical experience in the field.</p>
+            <ul>
+                <li>Web Developer (Present)</li>
+                <li>UI/UX Designer (Present)</li>
+                <li>Learning X (Present)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
     <script>
         const tutorialButton = document.getElementById('showTutorial');
         const tutorialButtons = document.getElementById('tutorialButtons');
@@ -305,9 +511,10 @@
                 currentWord += words[index].charAt(charIndex);
                 typingText.textContent = currentWord;
                 charIndex++;
-                setTimeout(type, 150); // Speed of typing
+                typingText.style.transform = `translateX(${charIndex * 1.2}ch)`; 
+                setTimeout(type, 150);
             } else {
-                setTimeout(deleteText, 2000); // Pause before deleting
+                setTimeout(deleteText, 2000);
             }
         }
 
@@ -316,11 +523,12 @@
                 currentWord = currentWord.slice(0, charIndex - 1);
                 typingText.textContent = currentWord;
                 charIndex--;
-                setTimeout(deleteText, 100); // Speed of deleting
+                typingText.style.transform = `translateX(${charIndex * 1.2}ch)`;
+                setTimeout(deleteText, 100);
             } else {
-                index = (index + 1) % words.length; // Move to next word
-                charIndex = 0; // Reset character index
-                setTimeout(type, 500); // Pause before typing next word
+                index = (index + 1) % words.length;
+                charIndex = 0;
+                setTimeout(type, 500);
             }
         }
 
